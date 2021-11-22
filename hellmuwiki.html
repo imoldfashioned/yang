@@ -81,6 +81,49 @@ padding-bottom: 7px;
 z-index: 1;
 }
 
+ 
+ 
+ 
+ 
+ .tooltip {
+			position: relative;
+			display: inline-block;
+			margin: auto;
+		}
+		.tooltip .tooltip-content {
+			visibility: hidden;
+			width: 220px;
+			background-color: white;
+			padding: 10px;
+			color: white;
+			text-aling: center;
+			position: absolute;
+			z-index: 9999;
+			bottom: 180%;
+			left: 50%;
+			margin-left: -110px;
+			border-style: solid;
+			border-color: #cccccc;
+			border-width: 1px;
+			border-radius: 4px 4px;
+		}
+		.tooltip .tooltip-content::after {
+			content: " ";
+			position: absolute;
+			top: 100%;
+			left: 50%;
+			margin-left: -10px;
+			border-width: 10px;
+			border-style: solid;
+			border-color: white transparent transparent transparent;
+		}
+		.tooltip:hover .tooltip-content { visibility: visible; }
+
+ 
+ 
+ 
+ 
+ 
   
  li {
   list-style-position: inside;
@@ -183,7 +226,10 @@ a:hover {text-decoration: underline; color: #0275d8;}
   </tr>
   <tr>
     <td class="tg-9djk">본명</td>
-   <td class="tg-jwyu">양해리(梁해리)<a name="note-1"><a href="#note-1-1"><font size=2>[1]</font></a></a></td>
+   <td class="tg-jwyu">양해리(梁해리)<div class="tooltip">
+<a name="note-1"><a href="#note-1-1"><font size=2><span>[1]</span></font></a></a>
+<div class="tooltip-content">
+<p><a name="note-1"><a href="#note-1-1"><font size=2><span>[1]</span></font></a></a><font color=#000000; size=2> 놀랍게도 한글 이름이다.놀랍게도 한글 이름이다.놀랍게도 한글 이름이다.</font></p></td>
   </tr>
   <tr>
     <td class="tg-9djk">생년월일</td>
